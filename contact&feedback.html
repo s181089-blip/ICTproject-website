@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Time And Mental Health - Contact and Feedback Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="https://drive.google.com/thumbnail?id=1q7bAwo-CdZ9Bk6aT0Plq0YIdaKgm8XtC&sz=s100" alt="Site logo "width="40" height="40">
+            </a>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="causes&effects.html">Causes & Effects</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="contact&feedback.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-intro">
+                <span class="eyebrow">Contact & Feedback</span>
+                <h1>Share your feedback with the author</h1>
+                <p>Tell us what you think about screen time and mental health. Your message will help improve this project and support future research.</p>
+                <div class="contact-meta">
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:s252102@imas.edu.my">s252102@imas.edu.my</a>
+                    </div>
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:+1234567890">+1 234 567 890</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <form class="contact-form" action="mailto:s252102@imas.edu.my" method="post" enctype="text/plain">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="Subject" placeholder="Feedback subject">
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" rows="8" placeholder="Write your feedback here..." required></textarea>
+                    </div>
+                    <button type="submit" class="send-button">Send Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Group 5. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.querySelector('.contact-form');
+        
+        form.addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value;
+            
+            setTimeout(() => {
+                alert(`Thank you, ${name}! Your feedback has been sent to the author. We appreciate your input.`);
+                form.reset();
+            }, 100);
+        });
+    </script>
+</body>
+</html>
